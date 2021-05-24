@@ -12,6 +12,7 @@ public class Player {
     private Metadata metadata;
     private String playerId;
     private String name;
+    private String commonName;
     private String pictureSrc;
     private String pictureDataSrc;
     private String pictureDataSrcset;
