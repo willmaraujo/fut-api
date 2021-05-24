@@ -15,71 +15,33 @@ package model;
 
 import com.google.gson.annotations.SerializedName;
 
+
 import java.util.Objects;
 
 /**
- * Club
+ * ErrorResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-05-24T14:15:34.912+02:00")
-public class Club {
-  @SerializedName("id")
-  private Integer id = null;
+public class ErrorResponse {
+  @SerializedName("error")
+  private java.lang.Error error = null;
 
-  @SerializedName("name")
-  private String name = null;
-
-  @SerializedName("league")
-  private Integer league = null;
-
-  public Club id(Integer id) {
-    this.id = id;
+  public ErrorResponse error(java.lang.Error error) {
+    this.error = error;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get error
+   * @return error
   **/
-  public Integer getId() {
-    return id;
+
+  public java.lang.Error getError() {
+    return error;
   }
 
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-  public Club name(String name) {
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Club league(Integer league) {
-    this.league = league;
-    return this;
-  }
-
-   /**
-   * Get league
-   * @return league
-  **/
-  public Integer getLeague() {
-    return league;
-  }
-
-  public void setLeague(Integer league) {
-    this.league = league;
+  public void setError(java.lang.Error error) {
+    this.error = error;
   }
 
 
@@ -91,26 +53,22 @@ public class Club {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Club club = (Club) o;
-    return Objects.equals(this.id, club.id) &&
-        Objects.equals(this.name, club.name) &&
-        Objects.equals(this.league, club.league);
+    ErrorResponse errorResponse = (ErrorResponse) o;
+    return Objects.equals(this.error, errorResponse.error);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, league);
+    return Objects.hash(error);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Club {\n");
+    sb.append("class ErrorResponse {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    league: ").append(toIndentedString(league)).append("\n");
+    sb.append("    error: ").append(toIndentedString(error)).append("\n");
     sb.append("}");
     return sb.toString();
   }

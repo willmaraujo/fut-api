@@ -15,71 +15,54 @@ package model;
 
 import com.google.gson.annotations.SerializedName;
 
+
 import java.util.Objects;
 
 /**
- * Club
+ * PlayerPace
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-05-24T14:15:34.912+02:00")
-public class Club {
-  @SerializedName("id")
-  private Integer id = null;
+public class PlayerPace {
+  @SerializedName("acceleration")
+  private Integer acceleration = null;
 
-  @SerializedName("name")
-  private String name = null;
+  @SerializedName("sprint_speed")
+  private Integer sprintSpeed = null;
 
-  @SerializedName("league")
-  private Integer league = null;
-
-  public Club id(Integer id) {
-    this.id = id;
+  public PlayerPace acceleration(Integer acceleration) {
+    this.acceleration = acceleration;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get acceleration
+   * @return acceleration
   **/
-  public Integer getId() {
-    return id;
+
+  public Integer getAcceleration() {
+    return acceleration;
   }
 
-  public void setId(Integer id) {
-    this.id = id;
+  public void setAcceleration(Integer acceleration) {
+    this.acceleration = acceleration;
   }
 
-  public Club name(String name) {
-    this.name = name;
+  public PlayerPace sprintSpeed(Integer sprintSpeed) {
+    this.sprintSpeed = sprintSpeed;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Get sprintSpeed
+   * @return sprintSpeed
   **/
-  public String getName() {
-    return name;
+
+  public Integer getSprintSpeed() {
+    return sprintSpeed;
   }
 
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Club league(Integer league) {
-    this.league = league;
-    return this;
-  }
-
-   /**
-   * Get league
-   * @return league
-  **/
-  public Integer getLeague() {
-    return league;
-  }
-
-  public void setLeague(Integer league) {
-    this.league = league;
+  public void setSprintSpeed(Integer sprintSpeed) {
+    this.sprintSpeed = sprintSpeed;
   }
 
 
@@ -91,26 +74,24 @@ public class Club {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Club club = (Club) o;
-    return Objects.equals(this.id, club.id) &&
-        Objects.equals(this.name, club.name) &&
-        Objects.equals(this.league, club.league);
+    PlayerPace playerPace = (PlayerPace) o;
+    return Objects.equals(this.acceleration, playerPace.acceleration) &&
+        Objects.equals(this.sprintSpeed, playerPace.sprintSpeed);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, league);
+    return Objects.hash(acceleration, sprintSpeed);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Club {\n");
+    sb.append("class PlayerPace {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    league: ").append(toIndentedString(league)).append("\n");
+    sb.append("    acceleration: ").append(toIndentedString(acceleration)).append("\n");
+    sb.append("    sprintSpeed: ").append(toIndentedString(sprintSpeed)).append("\n");
     sb.append("}");
     return sb.toString();
   }

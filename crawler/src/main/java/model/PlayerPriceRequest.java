@@ -15,23 +15,21 @@ package model;
 
 import com.google.gson.annotations.SerializedName;
 
+
 import java.util.Objects;
 
 /**
- * Club
+ * PlayerPriceRequest
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2021-05-24T14:15:34.912+02:00")
-public class Club {
+public class PlayerPriceRequest {
   @SerializedName("id")
   private Integer id = null;
 
-  @SerializedName("name")
-  private String name = null;
+  @SerializedName("platform")
+  private String platform = null;
 
-  @SerializedName("league")
-  private Integer league = null;
-
-  public Club id(Integer id) {
+  public PlayerPriceRequest id(Integer id) {
     this.id = id;
     return this;
   }
@@ -40,6 +38,7 @@ public class Club {
    * Get id
    * @return id
   **/
+
   public Integer getId() {
     return id;
   }
@@ -48,38 +47,22 @@ public class Club {
     this.id = id;
   }
 
-  public Club name(String name) {
-    this.name = name;
+  public PlayerPriceRequest platform(String platform) {
+    this.platform = platform;
     return this;
   }
 
    /**
-   * Get name
-   * @return name
+   * Get platform
+   * @return platform
   **/
-  public String getName() {
-    return name;
+
+  public String getPlatform() {
+    return platform;
   }
 
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public Club league(Integer league) {
-    this.league = league;
-    return this;
-  }
-
-   /**
-   * Get league
-   * @return league
-  **/
-  public Integer getLeague() {
-    return league;
-  }
-
-  public void setLeague(Integer league) {
-    this.league = league;
+  public void setPlatform(String platform) {
+    this.platform = platform;
   }
 
 
@@ -91,26 +74,24 @@ public class Club {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Club club = (Club) o;
-    return Objects.equals(this.id, club.id) &&
-        Objects.equals(this.name, club.name) &&
-        Objects.equals(this.league, club.league);
+    PlayerPriceRequest playerPriceRequest = (PlayerPriceRequest) o;
+    return Objects.equals(this.id, playerPriceRequest.id) &&
+        Objects.equals(this.platform, playerPriceRequest.platform);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, league);
+    return Objects.hash(id, platform);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Club {\n");
+    sb.append("class PlayerPriceRequest {\n");
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    league: ").append(toIndentedString(league)).append("\n");
+    sb.append("    platform: ").append(toIndentedString(platform)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -1,7 +1,5 @@
 package extractor;
 
-import model.Club;
-import model.Nationality;
 import model.Player;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -10,8 +8,6 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.net.URI;
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
